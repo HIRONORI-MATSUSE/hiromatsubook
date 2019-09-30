@@ -3,18 +3,17 @@ class PicturesController < ApplicationController
   end
 
   def new
+    @picture = Picture.new
   end
 
   def create
+    Picture.create(picture_params)
+    redirect_to new_picture_path
   end
 
-  def show
-  end
+  private
 
-  def edit
+  def picture_params
+    params.require(:picture).permit(:content)
   end
-
-  def destroy
-  end
-
 end
