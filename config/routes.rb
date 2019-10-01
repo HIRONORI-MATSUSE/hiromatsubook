@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :pictures do
-    collectiopn do
+    collection do
       post :confirm
     end
   end
