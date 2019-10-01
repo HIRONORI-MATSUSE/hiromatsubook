@@ -1,5 +1,7 @@
 <h1>ブログ一覧</h1>
 
+<p><%= notice %></p>
+
 <table>
   <tr>
     <th>内容</th>
@@ -9,8 +11,8 @@
   <tr>
     <td><%= picture.content %></td>
      <td><%= link_to '投稿確認する', picture_path(picture.id) %></td>
-     <td><%= link_to "投稿を編集する", edit_picture_path(picture.id) %></td>
-     <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete %></td>
+     <td><%= link_to "投稿を編集する", edit_picture_path(picture.id), data: { confirm: '本当に編集していいですか？' } %></td>
+     <td><%= link_to 'ブログを削除する', picture_path(blog.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
   </tr>
 <% end %>
 </table>
