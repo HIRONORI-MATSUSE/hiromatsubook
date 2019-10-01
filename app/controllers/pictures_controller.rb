@@ -9,7 +9,11 @@ class PicturesController < ApplicationController
 
   def create
     Picture.create(picture_params)
-    redirect_to new_picture_path
+    if @picture.save
+      redirect_to pictures_path, notice: "ブログを作成しました"
+    else
+      render :new
+    end
   end
 
   def show
