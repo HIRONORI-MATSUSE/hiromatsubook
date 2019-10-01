@@ -1,5 +1,13 @@
 <h1>投稿詳細画面</h1>
-<p>内容: <%= @picture.content %></p>
+<p>内容: <%= @picture.content if @picture.content %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @picture.image.url if @picture.image.url %>
+</p>
+
+<%= link_to 'Edit', edit_picture_path %> |
+<%= link_to 'Back', picture_path %>
 
 <% unless @picture.user_id == current_user.id %>
   <% if @favorite.present? %>
