@@ -44,7 +44,7 @@ class PicturesController < ApplicationController
   end
 
   def show
-    # @favorite = Favorite.new, current_user.favorites.find_by(picture_id: @picture.id)
+    @favorite = current_user.favorites.find_by(picture_id: @picture.id)
   end
 
 
