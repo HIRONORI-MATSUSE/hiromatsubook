@@ -1,3 +1,4 @@
+<div class="main-container ">
 <h1>Sign up</h1>
 
 <% if @user.errors.any? %>
@@ -10,6 +11,8 @@
     </ul>
   </div>
 <% end %>
+
+
 
 <%= form_with(model: @user, local: true) do |f| %>
   <%= f.label :name %>
@@ -26,3 +29,4 @@
 
   <%= f.submit "Create my account" %>
 <% end %>
+</div>
