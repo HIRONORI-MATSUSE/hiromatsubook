@@ -14,9 +14,6 @@ header{
   display: flex;
   align-items:center;
   //justify-conten
-
-
-
   .app_name{
     font-size: 1.8rem;
     margin-left: 20px;
@@ -91,8 +88,6 @@ header{
   width: 100%;
 }
 
-
-
 //スタイル全体の設定
 .contents{
   width: 800px;
@@ -100,7 +95,6 @@ header{
   flex-direction: column;
   background-color: #fff;
 }
-
 // 繰り返す処理の設定
 
 .index_picture{
@@ -116,8 +110,6 @@ header{
 .show_edit{
   display: flex;
 }
-
-
 
 footer{
   margin-top:  auto;

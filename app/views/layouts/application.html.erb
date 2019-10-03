@@ -4,17 +4,11 @@
     <title>Hiromatsubook</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
   </head>
-
   <body>
-
-
-
-
     <header>
       <div class="app_name"><a href="#">HIROMATSUBOOK</a></div>
       <div class="header_manu">
@@ -32,38 +26,12 @@
     <% flash.each do |key,value| %>
     <%= content_tag(:div,value,class:"#{key}")%>
     <% end %>
-
-
-
-
-
-
-
-
-
         <%= yield %>
-
-
-
-
-
-
-
-
-
-
         <footer>
           <div>
             <li>HIROMATSUBOOK</li>
             <li>© 2019 Copyright MATSUSE</li>
           </div>
         </footer>
-
-
-
-
-
-
-
   </body>
 </html>
