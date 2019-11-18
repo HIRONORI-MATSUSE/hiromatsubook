@@ -40,7 +40,7 @@ class PicturesController < ApplicationController
 
   def confirm
     @picture = Picture.new(picture_params)
-    render :new if @blog
+    render :new if @picture
   end
 
   def show

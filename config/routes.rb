@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'users#new'
+  root 'users#new'
   get 'sessions/new'
   resources :pictures do
     collection do
