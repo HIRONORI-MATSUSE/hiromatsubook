@@ -13,13 +13,13 @@
       <div class="app_name"><a href="#">HIROMATSUBOOK</a></div>
       <div class="header_manu">
         <% if logged_in? %>
-        <div class="profile"><%= link_to "マイページ", user_path(current_user.id) %></div>
-        <div class="new_post"><%= link_to "投稿画面", new_picture_path %></div>
-        <div class="logout"><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></div>
-        <div class="crrent_user">ユーザー名：<%= current_user.name %></div>
+          <div class="profile"><%= link_to "マイページ", user_path(current_user.id) %></div>
+          <div class="new_post"><%= link_to "投稿画面", new_picture_path(current_user.id) %></div>
+          <div class="logout"><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></div>
+          <div class="crrent_user">ユーザー名：<%= current_user.name %></div>
         <% else %>
-        <div class="sign_up"><%= link_to "新規登録", new_user_path %></div>
-        <div class="login"><%= link_to "ログイン", new_session_path %></div>
+          <div class="sign_up"><%= link_to "新規登録", new_user_path %></div>
+          <div class="login"><%= link_to "ログイン", new_session_path %></div>
         <% end %>
       </div>
     </header>
